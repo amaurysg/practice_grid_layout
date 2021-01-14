@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice own Grid</title>
+</head>
+
+
+<style>
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 15% 85%;
+    grid-template-areas:
+      "aside main"
+      "footer footer";
+    gap: 5px;
+  }
+
+
+
+  aside {
+    grid-area: aside;
+    background-color: lightcoral;
+  }
+
+  main {
+    grid-area: main;
+    background-color: lightgreen;
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: lightseagreen;
+  }
+</style>
+
+<body>
+
+  <aside>Aside</aside>
+  <main>Main</main>
+  <footer>footer</footer>
+</body>
+
+</html>
