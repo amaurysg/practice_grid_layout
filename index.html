@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aprendiendo Grid CSS</title>
+  <script src="https://kit.fontawesome.com/9c5bbeff9c.js" crossorigin="anonymous"></script>
   <style>
     html {
       box-sizing: border-box;
@@ -281,8 +282,47 @@
     .grid-align-tracks .item:nth-child(1) {
       justify-self: end;
       align-self: center;
+    }
+
+    .grid-min-max {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, minmax(100px, 200px));
+      grid-template-columns: repeat(3, minmax(min-content, 200px));
+      grid-template-columns: repeat(3, minmax(100px, max-content));
 
 
+    }
+
+
+    .grid-repeat {
+      display: grid;
+      grid-template-columns: repeat(4, 10% 20% 30% 40%);
+      grid-template-columns: repeat(1, 10% 20% 30% 40%);
+
+
+    }
+
+    .grid-dynamics {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      /* Auto fill rellena la grid con tracks generados dinamicamente */
+      grid-template-columns: repeat(auto-fill, minmax(180px, 300px));
+      /* autofit */
+      grid-template-columns: repeat(auto-fit, 250px);
+      grid-template-columns: repeat(auto-fill, 250px);
+      justify-content: center;
+
+    }
+
+    /*    .grid-dynamics .item {
+      height: 300px;
+    } */
+
+    .grid-responsive {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 5px;
     }
   </style>
 
@@ -291,7 +331,7 @@
 <body>
   <h1 id="top">Aprendiendo Grid CSS</h1>
   <ul class="menu">
-    <li><a href="#grid-terms">Conceptos básicos</a></li>
+    <li><a href="#grid-terms">Conceptos básicos</a><i class="fab fa-github"></i> </li>
     <li><a href="#grid-explicit">Grid Explicita</a></li>
     <li><a href="#grid-line-names">Grid con Nombres de Línea</a></li>
     <li><a href="#grid-areas">Grid con Áreas</a></li>
@@ -549,16 +589,174 @@
   </section>
   <h2 id="grid-min-max">Tamaños Máximos y Mínimos de Grid Tracks</h2>
   <a href="#top">🔝</a>
-  <section class="container grid-min-max"></section>
+  <section class="container grid-min-max">
+    <article class="item">Item 1
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quam exercitationem quisquam nihil dolor deserunt
+        assumenda, aliquam nisi aperiam similique corporis adipisci. Tenetur, accusantium ab error cumque nam deserunt
+        blanditiis.</p>
+
+    </article>
+    <article class="item">Item 2</article>
+    <article class="item">Item 3</article>
+    <article class="item">Item 4</article>
+    <article class="item">Item 5</article>
+
+
+  </section>
   <h2 id="grid-repeat">Grid con Patrones Repetitivos</h2>
   <a href="#top">🔝</a>
-  <section class="container grid-repeat"></section>
+  <section class="container grid-repeat">
+    <article class="item">
+      <p>item 1</p>
+    </article>
+    <article class="item">
+      <p>item 2</p>
+    </article>
+    <article class="item">
+      <p>item 3</p>
+    </article>
+    <article class="item">
+      <p>item 4</p>
+    </article>
+    <article class="item">
+      <p>item 5</p>
+    </article>
+    <article class="item">
+      <p>item 6</p>
+    </article>
+    <article class="item">
+      <p>item 7</p>
+    </article>
+    <article class="item">
+      <p>item 8</p>
+    </article>
+    <article class="item">
+      <p>item 9</p>
+    </article>
+    <article class="item">
+      <p>item 10</p>
+    </article>
+    <article class="item">
+      <p>item 11</p>
+    </article>
+    <article class="item">
+      <p>item 12</p>
+    </article>
+    <article class="item">
+      <p>item 13</p>
+    </article>
+    <article class="item">
+      <p>item 14</p>
+    </article>
+    <article class="item">
+      <p>item 15</p>
+    </article>
+    <article class="item">
+      <p>item 16</p>
+    </article>
+    <article class="item">
+      <p>item 17</p>
+    </article>
+    <article class="item">
+      <p>item 18</p>
+    </article>
+    <article class="item">
+      <p>item 19</p>
+    </article>
+  </section>
   <h2 id="grid-dynamics">Grids Dinámicas</h2>
   <a href="#top">🔝</a>
-  <section class="container grid-dynamics"></section>
+  <section class="container grid-dynamics">
+    <article class="item">
+      <p>Item 1</p>
+    </article>
+    <article class="item">
+      <p>Item 2</p>
+    </article>
+    <article class="item">
+      <p>Item 3</p>
+    </article>
+    <article class="item">
+      <p>Item 4</p>
+    </article>
+    <article class="item">
+      <p>Item 5</p>
+    </article>
+    <article class="item">
+      <p>Item 6</p>
+    </article>
+    <article class="item">
+      <p>Item 7</p>
+    </article>
+    <article class="item">
+      <p>Item 8</p>
+    </article>
+    <article class="item">
+      <p>Item 9</p>
+    </article>
+  </section>
   <h2 id="grid-responsive">Responsive sin Media Queries</h2>
   <a href="#top">🔝</a>
-  <section class="container grid-responsive"></section>
+  <section class="container grid-responsive">
+    <article class="item">
+      <p>Grid Item 1</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 2</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 3</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 4</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 5</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 6</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 7</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 8</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 9</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 10</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 11</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 12</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 13</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 14</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 15</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 16</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 17</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 18</p>
+    </article>
+    <article class="item">
+      <p>Grid Item 19</p>
+    </article>
+
+  </section>
   <h2 id="grid-nested">Grids Anidados</h2>
   <a href="#top">🔝</a>
   <section class="container grid-nested"></section>
