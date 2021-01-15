@@ -16,15 +16,17 @@
   body {
 
     min-height: 100vh;
+    min-width: 320px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, auto);
+    gap: 3px;
 
   }
 
   body>* {
     border: 2px solid #222;
-    background-color: #666;
+
   }
 
   h2 {
@@ -32,43 +34,61 @@
   }
 
   header {
+    border-radius: 5px;
+    background-color: salmon;
     grid-row: span 1;
     grid-column: span 6;
 
   }
 
   nav {
+    border-radius: 5px;
     grid-row: span 1;
     grid-column: span 6;
+    background-color: sandybrown;
   }
 
   .uc-left {
+    border-radius: 5px;
     grid-column: span 2;
     grid-row: span 2;
+    background-color: skyblue;
   }
 
   .uc-center {
+    border-radius: 5px;
     grid-column: span 2;
     grid-row: span 2;
+    background-color: springgreen;
+
   }
 
   .uc-right {
+    border-radius: 5px;
     grid-column: span 2;
     grid-row: span 2;
+    background-color: violet;
+
   }
 
   .middle {
+    border-radius: 5px;
     grid-column: span 3;
     grid-row: span 3;
+    background-color: wheat;
   }
 
   .lower {
+    border-radius: 5px;
     grid-column: span 3;
     grid-row: span 3;
+    background-color: rgb(124, 136, 240);
   }
 
   footer {
+    border-radius: 5px;
     grid-column: span 6;
+    background-color: rgb(68, 139, 136);
 
   }
 
